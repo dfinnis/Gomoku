@@ -22,7 +22,7 @@ A player wins by aligning 5 or more stones.
 First you need to have your golang workspace set up on your machine.
 Then clone this repo into your go-workspace/src/ folder.
 
-```git clone https://github.com/anyashuka/Gomoku.git; cd Gomoku```
+```git clone https://github.com/dfinnis/Gomoku.git; cd Gomoku```
 
 Download dependencies.
 
@@ -36,7 +36,7 @@ Alternatively build and run the binary.
 
 ```go build; ./Gomoku```
 
-![Example](https://github.com/anyashuka/Gomoku/blob/master/img/example.gif)
+![Example](https://github.com/dfinnis/Gomoku/blob/master/img/example.gif)
 
 ## Additional Rules
 
@@ -44,7 +44,7 @@ Alternatively build and run the binary.
 
 You can remove a pair of your opponent’s stones by flanking them. In the following scenario, by playing in a, Blue captures the red pair and removes the stones from the game. One can only capture PAIRS, not 1 or >2 stones in a row.
 
-<img src="https://github.com/anyashuka/Gomoku/blob/master/img/capture.png" width="20%">
+<img src="https://github.com/dfinnis/Gomoku/blob/master/img/capture.png" width="20%">
 
 #### Capture 10
 
@@ -58,15 +58,15 @@ A player that aligns 5 stones only wins if the opponent can not break this align
 
 A free-three is an alignement of three stones that, if not immediately blocked, allows for an indefendable alignment of four stones (an alignment of four stones with two unobstructed extremities). Both of these scenarios are free-threes:
 
-<img src="https://github.com/anyashuka/Gomoku/blob/master/img/freeThree.png" width="20%">
+<img src="https://github.com/dfinnis/Gomoku/blob/master/img/freeThree.png" width="20%">
 
-<img src="https://github.com/anyashuka/Gomoku/blob/master/img/freeThree2.png" width="25%">
+<img src="https://github.com/dfinnis/Gomoku/blob/master/img/freeThree2.png" width="25%">
 
 A double-three is a move that introduces two simultaneous free-three alignments. This is an indefendable scenario.
 
 In the following scenario, by playing in a, Red would introduce a double-three, therefore this is a forbidden move. However, if there were a blue stone in b, one of the three-aligned would be obstructed, therefore the move in a would be legal. Furthermore, it is not forbidden to introduce a double-three by capturing a pair.
 
-<img src="https://github.com/anyashuka/Gomoku/blob/master/img/doubleFreeThree.png" width="37%">
+<img src="https://github.com/dfinnis/Gomoku/blob/master/img/doubleFreeThree.png" width="37%">
 
 ## Approach
 
@@ -79,7 +79,7 @@ For each move considered by the AI ```evaluateMove()``` checks each vertex for a
 
 For any considered move the sum of values is calculated.
 
-<img src="https://github.com/anyashuka/Gomoku/blob/master/img/aiPriority.png" width="37%">
+<img src="https://github.com/dfinnis/Gomoku/blob/master/img/aiPriority.png" width="37%">
 
 #### Depth > 1:
 + If considering the players move, add the value of that move.
@@ -111,7 +111,7 @@ For example: Move "A" will improve the player's position. The player continues t
 
 A threat space of of 4 spaces around the last two moves reduces the search space. In the following example, everything within the two red squares is within the threat space, and so is considered for the next move.
 
-<img src="https://github.com/anyashuka/Gomoku/blob/master/img/threatSpace.png" width="640">
+<img src="https://github.com/dfinnis/Gomoku/blob/master/img/threatSpace.png" width="640">
 
 On my system, with the default threatspace of 4, an AI depth of 4 is possible in under 0.5 seconds. A depth of 10 is possible by reducing the threat space to 1, not that this makes a better AI player.
 
@@ -119,7 +119,7 @@ On my system, with the default threatspace of 4, an AI depth of 4 is possible in
 
 Branching can be further reduced by excluding all moves which do not have have immediate neighbours, i.e. unconnected to anything. In the following example, everything within the two red squares has an immediate neighbour, and so is considered for the next move.
 
-<img src="https://github.com/anyashuka/Gomoku/blob/master/img/hasNeighbours.png" width="640">
+<img src="https://github.com/dfinnis/Gomoku/blob/master/img/hasNeighbours.png" width="640">
 
 ## Options
 
@@ -127,13 +127,13 @@ Branching can be further reduced by excluding all moves which do not have have i
 
 The AI suggests a move with a pulsing stone, but a human player must choose (click).
 
-![Hotseat](https://github.com/anyashuka/Gomoku/blob/master/img/hotseat.gif)
+![Hotseat](https://github.com/dfinnis/Gomoku/blob/master/img/hotseat.gif)
 
 ### Doge-mode
 
 Press key ```d```, or click the hidden doge-mode button in the new game screen, to toggle doge-mode.
 
-![Doge](https://github.com/anyashuka/Gomoku/blob/master/img/doge.gif)
+![Doge](https://github.com/dfinnis/Gomoku/blob/master/img/doge.gif)
 
 ### Fullscreen
 
