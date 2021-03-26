@@ -147,4 +147,4 @@ The GUI uses [Ebiten](https://github.com/hajimehoshi/ebiten), a dead simple open
 
 ## Team
 
-I wrote this project in a team with the wonderful [@Anya Schukin](https://github.com/anyashuka)
+I wrote this project in a team with the wonderful [@Anya Schukin](https://github.com/anyaschukin)
