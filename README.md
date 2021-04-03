@@ -14,7 +14,9 @@ A player wins by aligning 5 or more stones.
 * Human vs Human
 * Human vs Hotseat (AI suggests move, human chooses)
 
-#### Final Score 125/100
+See the [subject](https://github.com/dfinnis/Gomoku/blob/master/subject.pdf) for more details.
+
+*Final Score 125/100*
 
 
 ## Getting Started
